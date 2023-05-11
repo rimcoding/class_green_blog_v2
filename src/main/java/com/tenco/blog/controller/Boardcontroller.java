@@ -4,12 +4,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class ControllerTest {
+public class Boardcontroller {
+
+	@GetMapping({"", "/"})
+	public String indexPage() {
+		
+		return "/index";
 	
-	@GetMapping("/temp")
-	public String tempPage() {
-		//prefix: /WEB-INF/view
-	    //suffix: .jsp
-		return "/temp";
 	}
+	
 }
